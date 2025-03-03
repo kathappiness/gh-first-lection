@@ -1,0 +1,13 @@
+name: First Workflow
+# adding the event on that will trigger the workflow, workflow_dispatch - one of the events GitHub can listen on,
+# it makes sure we can manually trigger the workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+    # defining a runner the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello, Katie"
+      - name: Goodbye message
+        run: echo "Bye, love"
